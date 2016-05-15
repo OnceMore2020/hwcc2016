@@ -1,0 +1,13 @@
+Debug
+Release
+x64
+*.sdf
+ipch/shortestpath-f3f3015c/shortestpath-2e271fd5.ipch
+ipch/shortestpath-f3f3015c/shortestpath-9b149c4d.ipch
+shortestpath.sln
+deploy/bin
+deploy/build
+*-res.csv
+vsbuild.v12.suo
+.idea
+.ropeproject

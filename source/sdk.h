@@ -1,0 +1,32 @@
+﻿#ifndef __SDK_H__
+#define __SDK_H__
+
+#define MAX_EDGE_NUM    (2000 * 20)
+#define MAX_DEMAND_NUM  2
+
+enum PATH_ID
+{
+    WORK_PATH = 1,//P'
+    BACK_PATH = 2//P''
+};
+
+//读取文件并按行输出到buff。
+//buff为一个指针数组，每一个元素是一个字符指针，对应文件中一行的内容。
+//spec为允许解析的最大行数。
+extern int read_file(char ** const buff, const unsigned int spec, const char * const filename);
+
+//将result缓冲区中的内容写入文件，写入方式为覆盖写入
+extern void write_result(const char * const filename);
+
+//释放读文件的缓冲区
+extern void release_buff(char ** const buff, const int valid_item_num);
+
+//将结果记录到result缓冲区
+extern void record_result(const PATH_ID path_id, const unsigned short edge);
+//清除result缓冲区为初始状态
+extern void clear_result();
+
+//打印时间。入参为打印信息头
+void print_time(const char * const head);
+
+#endif
